@@ -1,25 +1,70 @@
+:root {
+  --bg-gradient: linear-gradient(135deg, #1a1a2e, #16213e);
+  --text-color: #e1e1e1;
+  --hover-color: #78b6ff;
+  --icon-color: rgba(255, 255, 255, 0.9);
+}
+
+body {
+  background: var(--bg-gradient) !important;
+  color: var(--text-color) !important;
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+}
+
 #header {
-    color: rgb(240,240,240);
-    text-align: center;
-    padding-top: 35px;
-    padding-left: 20px;
-    padding-right: 20px;
+  text-align: center;
+  padding: 2rem 1rem;
 }
 
-#element-left {
-    color: rgb(240,240,240);
-    text-align: center;
-    padding-top: 25px;
-    margin-left: 40px
+#header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(45deg, #4a90e2, #67b26f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
+.links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.link-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.link-card svg {
+  transition: all 0.3s ease;
+  fill: var(--icon-color);
+}
+
+.link-card:hover svg {
+  fill: var(--hover-color);
+}
+
+/* Remove these old selectors as they're no longer needed */
+#element-left,
 #element-right {
-    color: rgb(240,240,240);
-    text-align: center;
-    padding-top: 25px;
-    margin-right: 40px
+  display: none;
 }
 
 #title {
-    padding: 5px;
+  margin-top: 1rem;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  color: var(--text-color);
 }
